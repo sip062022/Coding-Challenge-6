@@ -69,3 +69,15 @@ function createExpenseTracker() { // Defines the formula and its variables
 let tracker = createExpenseTracker(); // defines the tracker as expense tracker
 console.log(tracker(200)); // Expected output: "Total Expenses: $200"
 console.log(tracker(150)); // Expected output: "Total Expenses: $350"
+
+// Task 8: Recursion in JavaScript //
+
+function calculateYearsToPromotion(employeeLevel) { // Defines the function and its variable
+    if (employeeLevel >= 10) { // Stops the promotions after level 10
+      return 0; // Return 0 years if employee is already at level 10
+    }
+    return 2 + calculateYearsToPromotion(employeeLevel + 1); // adds two years for each promotion
+};
+
+console.log(`Years to Level 10: ${calculateYearsToPromotion(7)}`); // Expected output: "Years to Level 10: 6"
+console.log(`Years to Level 10: ${calculateYearsToPromotion(5)}`); // Expected output: "Years to Level 10: 10"

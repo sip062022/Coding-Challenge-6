@@ -1,1 +1,1 @@
-This is my coding challenge 6.
+This is my coding challenge 6

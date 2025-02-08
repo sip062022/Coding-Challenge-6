@@ -44,3 +44,14 @@ function convertCurrency(amount, exchangeRate) {  // Declares the function and i
 
 console.log(`Converted Amount: $${convertCurrency(100, 1.1).toFixed(2)}`); // Expected output: "Converted Amount: $110.00"; .toFixed(2) used for 2 decimal places
 console.log(`Converted Amount: $${convertCurrency(250, 0.85).toFixed(2)}`); // Expected output: "Converted Amount: $212.50"; .toFixed(2) used for 2 decimal places
+
+// Task 6: Higher-Order Function //
+
+const orders = [200, 600, 1200, 450, 800]; // Declares orders array
+function applyBulkDiscount(orders, discountFunction) { // Defines function to be used to apply the discount
+    return orders.map(discountFunction); // Defines that each order in the array will have the discount applied to it
+};
+
+let discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount); // Defines the discount formula with the condition that it will only be applied for orders over 500
+
+console.log(discountedOrders); // Expected output: [200, 540, 1080, 450, 720]

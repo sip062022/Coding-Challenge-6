@@ -18,10 +18,8 @@ console.log(`Sales Tax: $${calculateSalesTax(500, 0.1)}`); // Expected output: "
 
 // Task 3: Arrow Function //
 
-const calculateBonus = (salary, performanceRating) => { // Declares a function and its variables
+const calculateBonus = (salary, performanceRating) => salary * (ratings[performanceRating]);  // Declares a function and its variables and the formula to be used
     const ratings = { Excellent: 0.20, Good: 0.10, Average: 0.05 }; // Defines the ratings and their numberical equivalents
-    return salary * (ratings[performanceRating]) // Defines the formula to be used
-};
 
 console.log(`Bonus: $${calculateBonus(5000, "Excellent")}`); // Expected output: "Bonus: $1000"
 console.log(`Bonus: $${calculateBonus(7000, "Good")}`); // Expected output: "Bonus: $700"

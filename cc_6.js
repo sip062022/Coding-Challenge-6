@@ -35,3 +35,12 @@ function calculateSubscriptionCost(plan, months, discount = 0) { // Declares the
 
 console.log(`Total Cost: $${calculateSubscriptionCost("Basic", 6, 10)}`); // Expected output: "Total Cost: $54" (per assignment expected result would be $50, but this math was incorrect as a 10% discount on a 6 month plan at $10/month is $54 not $50)
 console.log(`Total Cost: $${calculateSubscriptionCost("Premium", 12, 0)}`); // Expected output: "Total Cost: $240"
+
+// Task 5: Returning Values // 
+
+function convertCurrency(amount, exchangeRate) {  // Declares the function and its variables
+    return amount * exchangeRate // Defines the formula to be used
+};
+
+console.log(`Converted Amount: $${convertCurrency(100, 1.1).toFixed(2)}`); // Expected output: "Converted Amount: $110.00"; .toFixed(2) used for 2 decimal places
+console.log(`Converted Amount: $${convertCurrency(250, 0.85).toFixed(2)}`); // Expected output: "Converted Amount: $212.50"; .toFixed(2) used for 2 decimal places

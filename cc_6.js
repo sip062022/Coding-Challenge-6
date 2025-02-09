@@ -74,7 +74,8 @@ function calculateYearsToPromotion(employeeLevel) { // Defines the function and 
     if (employeeLevel >= 10) { // Stops the promotions after level 10
       return 0; // Return 0 years if employee is already at level 10
     }
-    return 2 + calculateYearsToPromotion(employeeLevel + 1); // adds two years for each promotion
+    let years = (10 - employeeLevel) * 2; // adds two years for each promotion
+    return (`${years}`); // logs the value for years
 };
 
 console.log(`Years to Level 10: ${calculateYearsToPromotion(7)}`); // Expected output: "Years to Level 10: 6"
